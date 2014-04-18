@@ -9,6 +9,17 @@ package corrector;
  */
 public class Pregunta {
 	
-	int peso;
+	float peso;
+	String respuestaCorrecta;
+	String respuestaAlumno;
+	TipoDePregunta tipo;
+	
+	public float puntosObtenidos(){
+		
+		if(this.respuestaAlumno.equals(this.respuestaCorrecta))
+		return this.peso;
+		else		
+		return 0;
+	}
 	
 }

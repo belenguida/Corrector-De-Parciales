@@ -14,7 +14,7 @@ public class ReglaDe3Simple implements MetodoDeCorreccion {
 		examen.actualizarNota(this.aplicarReglaDe3Simple(examen));	
 	}
 	
-	public float aplicarReglaDe3Simple(Examen examen){
+	public double aplicarReglaDe3Simple(Examen examen){
 		return examen.puntajeObtenido() * 10 / examen.puntajeTotal;
 		
 	}

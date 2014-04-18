@@ -16,7 +16,7 @@ public class Conversion implements MetodoDeCorreccion {
 		examen.actualizarNota(this.aplicarConversion(examen.puntajeObtenido()));	
 	}
 
-	private float aplicarConversion(float puntajeObtenido) {
+	private double aplicarConversion(double puntajeObtenido) {
 		// TODO Auto-generated method stub
 		return puntajeObtenido * this.coeficienteDeConversion;
 	}

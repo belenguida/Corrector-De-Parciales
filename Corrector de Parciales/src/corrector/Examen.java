@@ -14,24 +14,19 @@ import java.util.stream.Stream;
  */
 public class Examen {
 	
-	float nota;
-	float puntajeTotal;
+	double nota;
+	double puntajeTotal;
 	List<Pregunta> preguntas;
 		
 	@SuppressWarnings("rawtypes")
-	public float puntajeObtenido() {
+	public double puntajeObtenido() {
 		// TODO Auto-generated method stub
-		/*float puntaje = preguntas.stream().map(Pregunta::puntajePorPregunta).collect(Collectors.toList()).sum();
-		*/
-		return 0;
-	}
-	
-	public float puntajePorPregunta(Pregunta pregunta){
+		return preguntas.stream().mapToDouble((p) -> p.puntosObtenidos()).sum();
 		
-		return 0;
 	}
 
-	public void actualizarNota(float nota) {
+	
+	public void actualizarNota(double nota) {
 		// TODO Auto-generated method stub
 		
 	}
