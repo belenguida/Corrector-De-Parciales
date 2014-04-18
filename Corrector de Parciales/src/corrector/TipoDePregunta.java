@@ -8,5 +8,6 @@ package corrector;
  *
  */
 public interface TipoDePregunta {
+	
 
 }

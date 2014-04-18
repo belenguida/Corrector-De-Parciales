@@ -28,7 +28,7 @@ public class Examen {
 	
 	public void actualizarNota(double nota) {
 		// TODO Auto-generated method stub
-		
+		this.nota = nota;
 	}
 
 }

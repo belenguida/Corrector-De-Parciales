@@ -16,7 +16,7 @@ public class Profesor {
 	List<Examen> examenes;
 	
 	public void corregirExamenes(){
-		
+		this.getExamenes().stream().forEach(examen -> this.metodo.corregirExamen(examen));
 			
 	}
 	
