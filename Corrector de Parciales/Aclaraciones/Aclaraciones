@@ -1,0 +1,11 @@
+Aclaraciones sobre las decisiones de diseño.
+
+- Un objeto instanciado como Examen, tiene una colección de preguntas. Para la clase Pregunta, se definio un atributo "tipo", esto permitiría que una pregunta pueda ser de tres tipos diferentes y de ser necesario cambiar de tipo.
+
+- Un Profesor, tiene una colección de Examenes, y también un método de corrección, haciendo posible que éste cambie de método.
+
+- MetodoDeCorreccion fue definido como Interface, para permitir a un profesor cambiar facilmente su método de corrección.
+  Se podría haber usado herencia, pero la elección que aplicamos resulta más flexible, ya que de ser necesario, se pueden crear nuevos métodos de corrección que hereden de los ya existentes.
+  
+- En cada método de corrección particular, corregirParcial(), está implementado según el criterio que se pidió utilizar. 
+
