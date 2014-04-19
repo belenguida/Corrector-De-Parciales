@@ -3,24 +3,27 @@
  */
 package corrector;
 
+import corrector.interfaces.MetodoDeCorreccion;
+
 import java.util.List;
-import java.util.stream.Stream;
 
 /**
  * @author Belén
+ * @author Ignacio Doring
  *
  */
 public class Profesor {
 
-	MetodoDeCorreccion metodo;
-	List<Examen> examenes;
+    private MetodoDeCorreccion metodo;
+    private List<Examen> examenes;
 	
 	public void corregirExamenes(){
-		this.getExamenes().stream().forEach(examen -> this.metodo.corregirExamen(examen));
+		this.getExamenes().stream().forEach(examen -> examen.actualizarNota(this.metodo.corregirExamen(examen)));
 			
 	}
 	
 	public List<Examen> getExamenes(){
-		return this.examenes;
+        return this.examenes;
 	}
+
 }

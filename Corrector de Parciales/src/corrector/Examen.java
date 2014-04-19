@@ -3,20 +3,21 @@
  */
 package corrector;
 
-import java.util.Collection;
+import corrector.interfaces.TipoDePregunta;
+
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
- * @author Belén 
+ * @author Belén
+ * @author Ignacio Doring
  *
  */
 public class Examen {
 	
-	double nota;
-	double puntajeTotal;
-	List<Pregunta> preguntas;
+	private Double nota;
+	private Double puntajeTotal;
+    private Alumno alumno;
+	private List<TipoDePregunta> preguntas;
 		
 	@SuppressWarnings("rawtypes")
 	public double puntajeObtenido() {
@@ -31,4 +32,28 @@ public class Examen {
 		this.nota = nota;
 	}
 
+
+    public Double getNota() {
+        return nota;
+    }
+
+    public void setNota(Double nota) {
+        this.nota = nota;
+    }
+
+    public Double getPuntajeTotal() {
+        return puntajeTotal;
+    }
+
+    public void setPuntajeTotal(Double puntajeTotal) {
+        this.puntajeTotal = puntajeTotal;
+    }
+
+    public List<TipoDePregunta> getPreguntas() {
+        return preguntas;
+    }
+
+    public void setPreguntas(List<TipoDePregunta> preguntas) {
+        this.preguntas = preguntas;
+    }
 }
