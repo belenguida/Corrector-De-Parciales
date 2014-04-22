@@ -27,6 +27,11 @@ public class TiposDeRespuestaTest {
 	}
 
 	@Test
+	public void testTieneRespuesta(){
+		Assert.assertFalse(preguntaVoF.esLaRespuestaCorrecta(null));
+	}
+	
+	@Test
 	public void testRespuestaEsVerdadero(){
 		Assert.assertTrue(preguntaVoF.esLaRespuestaCorrecta(VERDADERO));
 	}
@@ -35,5 +40,6 @@ public class TiposDeRespuestaTest {
 	public void testRespuestaEsFalso(){
 		Assert.assertTrue(preguntaVoF.esLaRespuestaCorrecta(FALSO));		
 	}
-	
+
+
 }
