@@ -31,5 +31,11 @@ public class VerdaderoOFalso implements TipoDePregunta {
                respuestaDelAlumno.equalsIgnoreCase(respuestaCorrecta.substring(0,1));
 
     }
+
+    //Begin MOD - Gabriel Arce
+	public void setRespuestaCorrecta(String respuestaCorrecta) {
+		this.respuestaCorrecta = respuestaCorrecta;
+	}
+    //End MOD - Gabriel Arce
 	
 }
