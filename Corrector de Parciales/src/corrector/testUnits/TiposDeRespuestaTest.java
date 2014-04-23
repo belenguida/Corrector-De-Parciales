@@ -18,28 +18,20 @@ public class TiposDeRespuestaTest {
 	
 	@Before
 	public void setUp() throws Exception {
-		preguntaVoF = new VerdaderoOFalso();		
+		preguntaVoF = new VerdaderoOFalso();	
+		preguntaVoF.esLaRespuestaCorrecta(VERDADERO);
 	}
 
-	@Test
-	public void test() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testTieneRespuesta(){
-		Assert.assertFalse(preguntaVoF.esLaRespuestaCorrecta(null));
-	}
+//	@Test
+//	public void testTieneRespuesta(){
+//		Assert.assertFalse(preguntaVoF.esLaRespuestaCorrecta(null));
+//	}
 	
 	@Test
 	public void testRespuestaEsVerdadero(){
 		Assert.assertTrue(preguntaVoF.esLaRespuestaCorrecta(VERDADERO));
 	}
 
-	@Test
-	public void testRespuestaEsFalso(){
-		Assert.assertTrue(preguntaVoF.esLaRespuestaCorrecta(FALSO));		
-	}
 
 
 }
