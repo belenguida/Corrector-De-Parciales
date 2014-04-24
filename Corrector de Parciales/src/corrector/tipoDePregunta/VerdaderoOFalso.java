@@ -16,7 +16,10 @@ public class VerdaderoOFalso implements TipoDePregunta {
     private String respuestaCorrecta;
     private String respuestaDelAlumno;
 
-	@Override
+    @SuppressWarnings("unused")
+	private String titulo;
+    
+    @Override
     public Integer puntosObtenidos(){
 		
 		if(esLaRespuestaCorrecta(this.respuestaDelAlumno)){
@@ -37,5 +40,13 @@ public class VerdaderoOFalso implements TipoDePregunta {
 		this.respuestaCorrecta = respuestaCorrecta;
 	}
     //End MOD - Gabriel Arce
+
+	@Override
+	public void titulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+
+
 	
 }

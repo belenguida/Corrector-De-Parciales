@@ -11,6 +11,9 @@ public class PreguntaConcreta implements TipoDePregunta {
     private Integer peso;
     private String respuestaCorrecta;
     private String respuestaDelAlumno;
+    
+    @SuppressWarnings("unused")
+	private String titulo;
 
     @Override
     public Integer puntosObtenidos() {
@@ -24,4 +27,10 @@ public class PreguntaConcreta implements TipoDePregunta {
     public Boolean esLaRespuestaCorrecta(String respuestaDelAlumno) {
         return respuestaDelAlumno.equalsIgnoreCase(respuestaCorrecta);
     }
+
+	@Override
+	public void titulo(String titulo) {
+		this.titulo = titulo;
+		
+	}
 }

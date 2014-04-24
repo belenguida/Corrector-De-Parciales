@@ -16,10 +16,12 @@ public class Examen {
 	
 	private Double nota;
 	private Double puntajeTotal;
-    private Alumno alumno;
+
+	@SuppressWarnings("unused")
+	private Alumno alumno;
+	
 	private List<TipoDePregunta> preguntas;
 		
-	@SuppressWarnings("rawtypes")
 	public double puntajeObtenido() {
 		// TODO Auto-generated method stub
 		return preguntas.stream().mapToDouble((p) -> p.puntosObtenidos()).sum();

@@ -12,6 +12,9 @@ public class MultipleChoise implements TipoDePregunta {
     private Integer respuestaCorrecta;
     private String respuestaDelAlumno;
 
+    @SuppressWarnings("unused")
+	private String titulo;
+
     @Override
     public Integer puntosObtenidos() {
         if(esLaRespuestaCorrecta(this.respuestaDelAlumno)){
@@ -24,4 +27,10 @@ public class MultipleChoise implements TipoDePregunta {
     public Boolean esLaRespuestaCorrecta(String respuestaDelAlumno) {
         return respuestaCorrecta == Integer.valueOf(respuestaDelAlumno);
     }
+
+	@Override
+	public void titulo(String titulo) {
+		this.titulo = titulo;
+		
+	}
 }
