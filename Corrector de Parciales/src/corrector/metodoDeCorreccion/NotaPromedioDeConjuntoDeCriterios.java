@@ -13,12 +13,20 @@ public class NotaPromedioDeConjuntoDeCriterios implements MetodoDeCorreccion {
 
     private List<MetodoDeCorreccion> conjuntoDeCriterios;
 
-    @Override
+
+	@Override
     public Double corregirExamen(Examen examen) {
 
         return this.conjuntoDeCriterios.stream().mapToDouble(m -> m.corregirExamen(examen)).average().getAsDouble();
 
 
     }
+
+	//Begin MOD Gabriel Arce
+    public void setConjuntoDeCriterios(List<MetodoDeCorreccion> conjuntoDeCriterios) {
+		this.conjuntoDeCriterios = conjuntoDeCriterios;
+	}
+	//End MOD Gabriel Arce
+    
 }
 
