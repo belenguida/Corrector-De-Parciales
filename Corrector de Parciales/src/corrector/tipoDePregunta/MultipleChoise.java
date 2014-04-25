@@ -28,9 +28,35 @@ public class MultipleChoise implements TipoDePregunta {
         return respuestaCorrecta == Integer.valueOf(respuestaDelAlumno);
     }
 
-	@Override
-	public void titulo(String titulo) {
-		this.titulo = titulo;
-		
-	}
+    public Integer getPeso() {
+        return peso;
+    }
+
+    public void setPeso(Integer peso) {
+        this.peso = peso;
+    }
+
+    public String getRespuestaDelAlumno() {
+        return respuestaDelAlumno;
+    }
+
+    public void setRespuestaDelAlumno(String respuestaDelAlumno) {
+        this.respuestaDelAlumno = respuestaDelAlumno;
+    }
+
+    public Integer getRespuestaCorrecta() {
+        return respuestaCorrecta;
+    }
+
+    public void setRespuestaCorrecta(Integer respuestaCorrecta) {
+        this.respuestaCorrecta = respuestaCorrecta;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
 }

@@ -1,6 +1,3 @@
-/**
- * 
- */
 package corrector;
 
 import corrector.interfaces.TipoDePregunta;
@@ -22,15 +19,15 @@ public class Examen {
 	
 	private List<TipoDePregunta> preguntas;
 		
-	public double puntajeObtenido() {
-		// TODO Auto-generated method stub
-		return preguntas.stream().mapToDouble((p) -> p.puntosObtenidos()).sum();
+	public Integer puntajeObtenido() {
+        return preguntas.stream().mapToInt(p -> p.puntosObtenidos()).sum();
+
 		
 	}
 
 	
 	public void actualizarNota(double nota) {
-		// TODO Auto-generated method stub
+
 		this.nota = nota;
 	}
 

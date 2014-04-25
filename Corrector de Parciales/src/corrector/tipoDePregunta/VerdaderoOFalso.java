@@ -15,8 +15,6 @@ public class VerdaderoOFalso implements TipoDePregunta {
     private Integer peso;
     private String respuestaCorrecta;
     private String respuestaDelAlumno;
-
-    @SuppressWarnings("unused")
 	private String titulo;
     
     @Override
@@ -41,12 +39,32 @@ public class VerdaderoOFalso implements TipoDePregunta {
 	}
     //End MOD - Gabriel Arce
 
-	@Override
-	public void titulo(String titulo) {
-		this.titulo = titulo;
-	}
 
+    public Integer getPeso() {
+        return peso;
+    }
 
+    public void setPeso(Integer peso) {
+        this.peso = peso;
+    }
 
-	
+    public String getRespuestaCorrecta() {
+        return respuestaCorrecta;
+    }
+
+    public String getRespuestaDelAlumno() {
+        return respuestaDelAlumno;
+    }
+
+    public void setRespuestaDelAlumno(String respuestaDelAlumno) {
+        this.respuestaDelAlumno = respuestaDelAlumno;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
 }

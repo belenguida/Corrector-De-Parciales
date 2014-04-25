@@ -29,15 +29,20 @@ public class TestReglaDe3Simple {
 
 	@Before
 	public void setUp() throws Exception {
-		preguntaVoF1.titulo("El Zonda es el nombre de un huracan que se encuentra en la zona cuyana de la Argentina");
-		preguntaVoF1.setRespuestaCorrecta(FALSO);
-		preguntaVoF2.titulo("San Martin y Simon Bolivar se encontraron en la ciudad de Guayaquil");
-		preguntaVoF2.setRespuestaCorrecta(VERDADERO);
-		
+        preguntaVoF1.setTitulo("El Zonda es el nombre de un huracan que se encuentra en la zona cuyana de la Argentina");
+        preguntaVoF1.setRespuestaCorrecta(FALSO);
+        preguntaVoF1.setRespuestaDelAlumno(FALSO);
+        preguntaVoF1.setPeso(1);
+        preguntaVoF2.setTitulo("San Martin y Simon Bolivar se encontraron en la ciudad de Guayaquil");
+        preguntaVoF2.setRespuestaCorrecta(VERDADERO);
+        preguntaVoF2.setRespuestaDelAlumno(FALSO);
+        preguntaVoF2.setPeso(1);
+
 		preguntas.add(preguntaVoF1);
 		preguntas.add(preguntaVoF2);
 		
 		examen.setPreguntas(preguntas);
+        examen.setPuntajeTotal(2.0);
 		
 		
 	}

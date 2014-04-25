@@ -37,23 +37,26 @@ public class TestPromedio {
 	
 	@Before
 	public void setUp() throws Exception {
-		preguntaVoF1.titulo("El Zonda es el nombre de un huracan que se encuentra en la zona cuyana de la Argentina");
-		preguntaVoF1.setRespuestaCorrecta(FALSO);
-		preguntaVoF2.titulo("San Martin y Simon Bolivar se encontraron en la ciudad de Guayaquil");
-		preguntaVoF2.setRespuestaCorrecta(VERDADERO);
+        preguntaVoF1.setTitulo("El Zonda es el nombre de un huracan que se encuentra en la zona cuyana de la Argentina");
+        preguntaVoF1.setRespuestaCorrecta(FALSO);
+        preguntaVoF1.setRespuestaDelAlumno(FALSO);
+        preguntaVoF1.setPeso(5);
+        preguntaVoF2.setTitulo("San Martin y Simon Bolivar se encontraron en la ciudad de Guayaquil");
+        preguntaVoF2.setRespuestaCorrecta(VERDADERO);
+        preguntaVoF2.setRespuestaDelAlumno(FALSO);
+        preguntaVoF2.setPeso(5);
 		
 		preguntas.add(preguntaVoF1);
 		preguntas.add(preguntaVoF2);
 		
 		examen.setPreguntas(preguntas);
+        examen.setPuntajeTotal(10.0);
 		
-		reglaDe3Simple.corregirExamen(examen);
-		
-		restarN.setValorN(4);
-		restarN.corregirExamen(examen);
+		restarN.setValorN(2);
 
 		conjuntoDeCriterios.add(restarN);
-		conjuntoDeCriterios.add(reglaDe3Simple);		
+		conjuntoDeCriterios.add(reglaDe3Simple);
+        notaPromedio.setConjuntoDeCriterios(conjuntoDeCriterios);
 	}
 
 	@Test
@@ -68,12 +71,8 @@ public class TestPromedio {
 	
 	@Test
 	public void testElResultadoDeCorreccionEs4(){
-		restarN.corregirExamen(examen);
-		reglaDe3Simple.corregirExamen(examen);
 
-		notaPromedio.setConjuntoDeCriterios(conjuntoDeCriterios);
-		
-		assertEquals(4, notaPromedio.corregirExamen(examen), 4);
+		assertEquals(4.0, notaPromedio.corregirExamen(examen), 4.0);
 		
 	}	
 

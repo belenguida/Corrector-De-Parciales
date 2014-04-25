@@ -16,7 +16,7 @@ public class RestarN implements MetodoDeCorreccion {
 
     @Override
 	public Double corregirExamen(Examen examen) {
-		return examen.puntajeObtenido() - this.valorN;
+		return Double.valueOf(examen.puntajeObtenido() - this.valorN);
     }
 
     public Integer getValorN() {

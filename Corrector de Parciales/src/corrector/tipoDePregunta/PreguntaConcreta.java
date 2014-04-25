@@ -28,9 +28,35 @@ public class PreguntaConcreta implements TipoDePregunta {
         return respuestaDelAlumno.equalsIgnoreCase(respuestaCorrecta);
     }
 
-	@Override
-	public void titulo(String titulo) {
-		this.titulo = titulo;
-		
-	}
+    public Integer getPeso() {
+        return peso;
+    }
+
+    public void setPeso(Integer peso) {
+        this.peso = peso;
+    }
+
+    public String getRespuestaCorrecta() {
+        return respuestaCorrecta;
+    }
+
+    public void setRespuestaCorrecta(String respuestaCorrecta) {
+        this.respuestaCorrecta = respuestaCorrecta;
+    }
+
+    public String getRespuestaDelAlumno() {
+        return respuestaDelAlumno;
+    }
+
+    public void setRespuestaDelAlumno(String respuestaDelAlumno) {
+        this.respuestaDelAlumno = respuestaDelAlumno;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
 }

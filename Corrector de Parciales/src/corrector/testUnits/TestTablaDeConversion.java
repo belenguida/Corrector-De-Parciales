@@ -3,6 +3,7 @@ package corrector.testUnits;
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -27,24 +28,28 @@ public class TestTablaDeConversion {
 	Examen examen = new Examen();
 	
 	TablaDeConversion tablaConversion = new TablaDeConversion();
-	Map<Integer,Double> tabla;
+	Map<Integer,Double> tabla = new HashMap<Integer,Double>();
 	
 	@Before
 	public void setUp() throws Exception {
-		preguntaVoF1.titulo("El Zonda es el nombre de un huracan que se encuentra en la zona cuyana de la Argentina");
+		preguntaVoF1.setTitulo("El Zonda es el nombre de un huracan que se encuentra en la zona cuyana de la Argentina");
 		preguntaVoF1.setRespuestaCorrecta(FALSO);
-		preguntaVoF2.titulo("San Martin y Simon Bolivar se encontraron en la ciudad de Guayaquil");
+        preguntaVoF1.setRespuestaDelAlumno(FALSO);
+        preguntaVoF1.setPeso(1);
+		preguntaVoF2.setTitulo("San Martin y Simon Bolivar se encontraron en la ciudad de Guayaquil");
 		preguntaVoF2.setRespuestaCorrecta(VERDADERO);
-		
+        preguntaVoF2.setRespuestaDelAlumno(FALSO);
+        preguntaVoF2.setPeso(1);
+
 		preguntas.add(preguntaVoF1);
 		preguntas.add(preguntaVoF2);
 		
 		examen.setPreguntas(preguntas);		
 		
-		tabla.put(16, 10.0);
-		tabla.put(15, 8.0);
-		tabla.put(14, 6.0);
-		tabla.put(13, 4.0);
+		tabla.put(4, 10.0);
+		tabla.put(3, 6.0);
+		tabla.put(2, 4.0);
+		tabla.put(1, 2.0);
 		
 		tablaConversion.setTablaDeNotas(tabla);
 		
@@ -61,7 +66,7 @@ public class TestTablaDeConversion {
 	}
 	
 	@Test
-	public void testElResultadoDeCorrecionEs7(){
-		assertEquals(7.0, tablaConversion.corregirExamen(examen), 7.0);
+	public void testElResultadoDeCorrecionEs2(){
+		assertEquals(2.0, tablaConversion.corregirExamen(examen), 2.0);
 	}
 }
